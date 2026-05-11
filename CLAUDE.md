@@ -62,3 +62,10 @@ never assume which agent applies. if unclear - ask one question.
 parallel agents fine when slices are independent.
 
 complexity demon bad. club it.
+
+## slash command overrides
+
+these override the built-in skill/subagent routing. no exceptions.
+
+/prd - do NOT invoke planner skill. follow the PRD rule inline above.
+/grill-me - do NOT invoke skills or subagents. spawn Agent with subagent_type="grill-me" from .claude/agents/grill-me.md.

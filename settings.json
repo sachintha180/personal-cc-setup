@@ -11,7 +11,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash .claude/hooks/post-edit-quality.sh \"$CLAUDE_TOOL_RESULT_FILE_PATH\""
+            "command": "bash ~/.claude/hooks/post-edit-quality.sh \"$CLAUDE_TOOL_RESULT_FILE_PATH\""
           }
         ]
       }
@@ -22,7 +22,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash .claude/hooks/pre-bash-firewall.sh \"$CLAUDE_TOOL_INPUT_COMMAND\""
+            "command": "bash ~/.claude/hooks/pre-bash-firewall.sh \"$CLAUDE_TOOL_INPUT_COMMAND\""
           }
         ]
       }
@@ -33,7 +33,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash .claude/hooks/pre-compact-reinject.sh"
+            "command": "bash ~/.claude/hooks/pre-compact-reinject.sh"
           }
         ]
       }
@@ -44,7 +44,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash .claude/hooks/post-agent-validate.sh"
+            "command": "bash ~/.claude/hooks/post-agent-validate.sh"
           }
         ]
       }
