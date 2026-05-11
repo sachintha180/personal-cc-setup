@@ -1,0 +1,14 @@
+# ignore everything
+*
+
+# except tracked config
+!.gitignore
+!CLAUDE.md
+!settings.json
+!statusline.sh
+!agents/
+!agents/**
+!hooks/
+!hooks/**
+!specs/
+!specs/**
