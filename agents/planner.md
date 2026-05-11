@@ -5,7 +5,6 @@ model: haiku
 tools:
   - Read
   - WebSearch
-isolation: worktree
 ---
 
 grug think before grug build. planner job is to understand. not code. never code.

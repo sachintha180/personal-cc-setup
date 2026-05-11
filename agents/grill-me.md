@@ -7,7 +7,6 @@ tools:
   - Grep
   - Glob
   - WebSearch
-isolation: worktree
 ---
 
 grug stress-test plan. no fluff.
