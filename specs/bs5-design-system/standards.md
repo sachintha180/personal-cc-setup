@@ -126,12 +126,12 @@ Apply via Bootstrap's `m-*` / `p-*` / `gap-*` utilities. Do not hardcode pixel v
 
 These conventions must be applied consistently across all page and section layouts:
 
-| Convention              | Classes        | Value       |
-| ----------------------- | -------------- | ----------- |
+| Convention              | Classes        | Value        |
+| ----------------------- | -------------- | ------------ |
 | Page horizontal padding | `px-4 px-md-5` | 24px -> 48px |
 | Page vertical padding   | `py-4 py-md-5` | 24px -> 48px |
-| Section gap             | `gap-4`        | 24px        |
-| Inline item gap         | `gap-2`        | 8px         |
+| Section gap             | `gap-4`        | 24px         |
+| Inline item gap         | `gap-2`        | 8px          |
 
 ## Border Radius
 
@@ -145,7 +145,7 @@ Permitted exceptions:
 
 ## Animation
 
-Two durations only. No exceptions without architect approval.
+Two durations only. No exceptions without human approval.
 
 | Purpose                              | Duration | Bootstrap utility                              |
 | ------------------------------------ | -------- | ---------------------------------------------- |
@@ -187,11 +187,11 @@ If Bootstrap's existing classes need visual adjustment for this design system, a
 
 ### Step 3: Introduce `--ds-*` only when necessary
 
-If the semantic role is genuinely absent from Bootstrap's variable set, define a new `--ds-*` variable in `theme.css`. Consult the architect before adding it. Document its semantic role in `standards.md`.
+If the semantic role is genuinely absent from Bootstrap's variable set, define a new `--ds-*` variable in `theme.css`. Ask human before adding it. Document its semantic role in `standards.md`.
 
 ### Step 4: Document in `components.md`
 
-After architect approval, add the new component to `components.md` with:
+After human approval, add the new component to `components.md` with:
 - Purpose - what it does and when to use it
 - Bootstrap classes - the class composition
 - Token overrides - any `--bs-*` or `--ds-*` overrides applied

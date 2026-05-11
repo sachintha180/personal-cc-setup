@@ -81,7 +81,7 @@ See `standards.md` for the color system and semantic role definitions.
 - `rounded-pill` on badge elements only
 - `rounded-circle` on dot indicators and avatar elements only
 
-Any deviation requires architect approval.
+Any deviation requires human approval.
 
 #### Responsive Mobile-First Layout
 
@@ -93,9 +93,9 @@ Design for the smallest viewport first. Apply breakpoint-suffixed classes (`col-
 
 **MANDATORY**
 
-If a layout structure or component pattern is not present in `components.md`, consult the architect before designing it. Do not proceed with undocumented patterns. After architect approval, document the new pattern in `components.md` before implementation.
+If a layout structure or component pattern is not present in `components.md`, ask human before designing it. Do not proceed with undocumented patterns. After human approval, document the new pattern in `components.md` before implementation.
 
-**When to consult the architect:**
+**When to ask human:**
 
 - Component or layout pattern not in `components.md`
 - New `--ds-*` variable needed
@@ -120,7 +120,7 @@ Design specifications must not reference route names, page IDs, API endpoints, d
 
 #### No Undocumented Components
 
-Never specify a component that is not in `components.md`. If the need is new, consult the architect first.
+Never specify a component that is not in `components.md`. If the need is new, ask human first.
 
 #### No Decorative Color
 
@@ -146,7 +146,7 @@ Two durations only: 150ms for state changes (hover, focus, active), 300ms for mo
 
 ### Flexibility Policy
 
-Strict adherence to patterns is required. Deviations must be granted explicit architect approval and documented. Default to existing tokens and component patterns whenever possible.
+Strict adherence to patterns is required. Deviations must be granted explicit human approval and documented. Default to existing tokens and component patterns whenever possible.
 
 ## Workflow
 
@@ -162,7 +162,7 @@ Before specifying any structure, question every decision:
 - **What** responsive behaviour is expected at each breakpoint?
 - **Is** this the simplest composition that meets the requirement?
 
-Check `components.md` for existing patterns. If the pattern does not exist, call the architect before proceeding.
+Check `components.md` for existing patterns. If the pattern does not exist, stop. ask human before proceeding.
 
 Create a specification plan outlining:
 
@@ -170,7 +170,7 @@ Create a specification plan outlining:
 - Which Bootstrap classes apply
 - Which tokens apply or need scoped overrides
 - Responsive behaviour at each breakpoint
-- Any new patterns requiring architect approval
+- Any new patterns requiring human approval
 
 ### Step 2: Confirmation Phase
 
@@ -203,7 +203,7 @@ Review the specification against all tokens, constraints, and component patterns
 - Question decisions before committing to a pattern. Present alternatives when multiple Bootstrap patterns could satisfy the need.
 - Present plans before full specification. Wait for confirmation before proceeding.
 - Suggest the simplest composition that meets the requirement. Prefer Bootstrap-native patterns over custom CSS.
-- When a new pattern is needed, flag it and consult the architect rather than designing around it unilaterally.
+- When a new pattern is needed, flag it and ask human rather than designing around it unilaterally.
 
 ## References
 

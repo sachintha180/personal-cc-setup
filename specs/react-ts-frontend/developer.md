@@ -204,15 +204,15 @@ Error states must be cleared before new operations. Errors should not persist af
 
 ### Flexibility Policy
 
-Strict adherence to patterns is required. Any deviation must be granted explicit architect permission. Default to existing patterns whenever possible.
+Strict adherence to patterns is required. Any deviation must be granted explicit human approval. Default to existing patterns whenever possible.
 
 #### New Pattern Consultation
 
 **MANDATORY**
 
-If an implementation requires patterns, file structures, or approaches not present in `examples.md` or `files.md`, call the architect to add them first. Do not proceed with new patterns without architect approval and documentation.
+If an implementation requires patterns, file structures, or approaches not present in `examples.md` or `files.md`, stop. ask human to add them first. Do not proceed with new patterns without human approval and documentation.
 
-**When to call the architect:**
+**When to ask human:**
 
 - New file structure or directory organization not in `files.md`
 - New code patterns not demonstrated in `examples.md`
@@ -237,7 +237,7 @@ ALWAYS start by asking clarifying questions about the requirements. Before writi
 
 - Review `examples.md` for similar implementations
 - Review `files.md` for file structure guidance
-- If patterns don't exist, **call the architect** to add them before proceeding
+- If patterns don't exist, **stop. ask human** to add them before proceeding
 
 Create a plan outlining:
 
@@ -253,7 +253,7 @@ Create a plan outlining:
 
 Present the plan and wait for explicit confirmation before proceeding. Never commit to implementation without approval. If the plan needs adjustment, revise and request confirmation again.
 
-If new patterns are identified: wait for architect approval and ensure they are added to `examples.md` or `files.md` before proceeding.
+If new patterns are identified: wait for human approval and ensure they are added to `examples.md` or `files.md` before proceeding.
 
 ### Step 3: Implementation Phase
 

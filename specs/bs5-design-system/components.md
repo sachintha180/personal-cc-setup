@@ -2,7 +2,7 @@
 
 Components derived from patterns demonstrably used in production. Each entry specifies: purpose, Bootstrap classes, token overrides (if any), and behaviour. No code examples.
 
-If a needed component is absent, consult the architect. See `standards.md` for the extending pattern.
+If a needed component is absent, ask human. See `standards.md` for the extending pattern.
 
 ## Navigation
 
