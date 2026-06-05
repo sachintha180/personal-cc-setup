@@ -1,9 +1,4 @@
 {
-  "effortLevel": "medium",
-  "statusLine": {
-    "type": "command",
-    "command": "bash ~/.claude/statusline.sh"
-  },
   "hooks": {
     "PostToolUse": [
       {
@@ -49,5 +44,18 @@
         ]
       }
     ]
-  }
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.claude/statusline.sh"
+  },
+  "enabledPlugins": {
+    "gopls-lsp@claude-plugins-official": true
+  },
+  "effortLevel": "medium",
+  "voice": {
+    "enabled": true,
+    "mode": "hold"
+  },
+  "voiceEnabled": true
 }
