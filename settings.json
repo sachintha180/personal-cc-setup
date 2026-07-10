@@ -22,13 +22,13 @@
         ]
       }
     ],
-    "PreCompact": [
+    "SessionStart": [
       {
-        "matcher": "",
+        "matcher": "compact",
         "hooks": [
           {
             "type": "command",
-            "command": "bash ~/.claude/hooks/pre-compact-reinject.sh"
+            "command": "bash ~/.claude/hooks/post-compact-reinject.sh"
           }
         ]
       }
