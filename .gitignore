@@ -11,8 +11,6 @@
 !agents/**
 !hooks/
 !hooks/**
-!specs/
-!specs/**
 !skills/
 !skills/**
 skills/synced/
