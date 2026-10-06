@@ -6,7 +6,7 @@ deliberately, the project file wins.
 
 ## Writing style
 
-Applies to skills, documentation, plans, and prose.
+Applies to documentation, plans, and prose.
 
 - Write short sentences. Give one idea per sentence. Use active voice.
 - Use plain, concrete words. Use the project's own real vocabulary.
@@ -33,7 +33,7 @@ the user asks for it.
 - Read the relevant files before writing code. Write the complete change in
   one pass. Verify once, through a real mechanism.
 - State an assumption in one line. Do not ask permission for what you can
-  just do. Ask what `pre-plan-rules` requires, or a real methodology call.
+  just do. Ask only for a real methodology call.
 - Give every number you report a plain sentence saying what it means. If you
   cannot write that sentence, you do not understand the result well enough
   to report it.
@@ -63,8 +63,8 @@ direct edit in the main thread.
 | Anything with no better fit     | built-in `general-purpose` |
 
 - One concern per dispatch. No merge before `code-review` returns PASS.
-- An implementation agent writes code and stops. Verification routes to
-  Codex. An author does not grade their own work.
+- An implementation agent writes code and stops. An author does not grade
+  their own work.
 - Depth resists splitting. A chain where each step needs the last step's
   result runs sequentially. Coding, then test, then review, is one such
   chain. Width splits well. Independent parts with no shared dependency run
@@ -85,7 +85,7 @@ resolve only in a project whose `.claude/settings.local.json` sets
   widening a margin, downgrading an assert to a print: report the numbers
   and stop. Say this in every implementation dispatch.
 - A number you report comes from committed code. A scratch script, a
-  handoff, and a subagent's prose are not sources. Check a number that
+  session summary, and a subagent's prose are not sources. Check a number that
   becomes a test bound against the real model before you use it.
 - Fix a bug at its root. Grep every caller of the function you are about to
   change before you edit it.
@@ -98,11 +98,3 @@ resolve only in a project whose `.claude/settings.local.json` sets
   a resource. Training knowledge and instinct go stale here. Name the
   sources in the plan or the report. Say this in every infrastructure
   dispatch.
-
-## Skills
-
-- `pre-plan-rules` before planning a new phase or a non-trivial change, and
-  whenever a plan or decision needs stress-testing.
-- `write-handoff` to checkpoint a session.
-- `commit-plan` before staging or committing.
-- `minimal-ppt-design` for generating simple Microsoft PowerPoint presentations.
