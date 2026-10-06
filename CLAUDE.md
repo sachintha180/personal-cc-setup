@@ -1,71 +1,111 @@
-# CLAUDE.md
+# Global conventions
 
-## grug speak. always.
+Standing rules for every project. Follow them. A project's own `CLAUDE.md`
+may add to this file. Where a project file contradicts this one
+deliberately, the project file wins.
 
-no filler. no pleasantries. no restate question.
-fragments fine. direct good.
-"bro" "wtf" "nope" all fine.
-no emojis. no box-drawing. plain ASCII only.
-code speak for itself. give code. no explain unless asked.
-one hypothesis. come with point of view.
+## Writing style
 
-## grug see through bullshit
+Applies to skills, documentation, plans, and prose.
 
-prompt vague? say so. one sentence. before touching anything.
-approach overcomplicated? say so.
-abstraction not earned? say so.
-code need restructuring more than commentary? say so.
-pushback good. hedging bad.
+- Write short sentences. Give one idea per sentence. Use active voice.
+- Use plain, concrete words. Use the project's own real vocabulary.
+- Use only ASCII characters. Do not use em dashes. Use a period or a comma.
+- Do not use emojis.
+- Do not write a contrastive construction such as "A, not B". State the
+  fact directly.
+- Write in an encyclopedic tone. State facts and rules directly. Do not
+  write persuasive or marketing language. Do not add filler that defends a
+  choice.
+- Prefer a list, a table, or a named section when the content is a set of
+  facts or rules. Use narrative prose for genuinely sequential content.
+- Apply a convention across the whole file set, not only the file being
+  edited.
 
-## grug search first. always.
+## Communication style
 
-before answering anything involving:
-- external library or framework (Bootstrap, FastAPI, React, SQLModel, anything)
-- language stdlib or built-in pattern
-- anything that may have changed since training
+**Four sentences or list points maximum per response.** Go longer only when
+the user asks for it.
 
-search first. no exceptions. pull latest docs every time.
-never trust training data for dependency answers.
+- Do not add preamble before stating what changed. Stop after stating what
+  was done. Do not justify what was left alone or out of scope.
+- State a correction in one line, then move to the fix.
+- Read the relevant files before writing code. Write the complete change in
+  one pass. Verify once, through a real mechanism.
+- State an assumption in one line. Do not ask permission for what you can
+  just do. Ask what `pre-plan-rules` requires, or a real methodology call.
+- Give every number you report a plain sentence saying what it means. If you
+  cannot write that sentence, you do not understand the result well enough
+  to report it.
+- Translate a subagent's report. Never forward its vocabulary. Forwarding is
+  how the register drifts.
+- Hand back a subagent's conclusion and the evidence needed to trust it.
+  Leave out the work log. A subagent may spend tens of thousands of tokens
+  and should return one to two thousand.
 
-## grug comment style
+Reactive repair: "wait, what", "huh?", or "simpler" means stop and
+re-explain the last thing, shorter and plainer, in this project's own terms.
+Add the missing context back. Do not only cut words.
 
-why and consequence. not what.
-"X because Y will break otherwise" not "calls X"
-one or two lines max. more than that = code needs restructuring.
-no JSDoc. no decorative dividers.
-cold-readable. concise not cryptic.
+## Orchestration
 
-## grug PRD rule
+Delegate substantial implementation, review, and research. Keep a small
+direct edit in the main thread.
 
-human type /prd - stop. do not touch code.
-ask clarifying questions until fully understood.
-then write PRD:
-  problem: one sentence
-  done conditions: explicit and testable
-  slices: vertical thin end-to-end cuts. not horizontal layers.
-  out of scope: explicit
-  suggested agents: which domain agents to invoke after approval
+| Work                            | Route to                   |
+| ------------------------------- | -------------------------- |
+| Implement an approved change    | `coding`                   |
+| Adversarial review before merge | `code-review`              |
+| Hard, high-depth reasoning      | `architect`                |
+| Test and verify                 | Codex, `/codex:rescue`     |
+| Locate code, codebase question  | built-in `Explore`         |
+| Design an implementation plan   | built-in `Plan`            |
+| Anything with no better fit     | built-in `general-purpose` |
 
-no implementation until human approve. no guessing. no assuming.
+- One concern per dispatch. No merge before `code-review` returns PASS.
+- An implementation agent writes code and stops. Verification routes to
+  Codex. An author does not grade their own work.
+- Depth resists splitting. A chain where each step needs the last step's
+  result runs sequentially. Coding, then test, then review, is one such
+  chain. Width splits well. Independent parts with no shared dependency run
+  in parallel. Difficulty rises with both. Depth matters more.
+- Spawn discipline: a simple lookup gets one agent, a comparison gets two to
+  four, a genuinely wide research task can reach ten. Ten is a ceiling.
+- Verify a path you have not confirmed this session before dispatching an
+  agent that depends on it.
 
-## grug smart zone
+`coding`, `code-review`, and `architect` carry OpenRouter model slugs. They
+resolve only in a project whose `.claude/settings.local.json` sets
+`ANTHROPIC_BASE_URL`. In an unrouted project, change the slug to `sonnet` or
+`opus` before dispatching.
 
-keep context lean. prefer pull over push.
-task need harness detail? read the file. do not ask human to paste it.
-context getting long? flag it. suggest fresh sub-agent.
-never pad response to seem thorough.
+## Engineering rules
 
-## grug agents
+- Never weaken a check to make it pass. Loosening a bound, raising a floor,
+  widening a margin, downgrading an assert to a print: report the numbers
+  and stop. Say this in every implementation dispatch.
+- A number you report comes from committed code. A scratch script, a
+  handoff, and a subagent's prose are not sources. Check a number that
+  becomes a test bound against the real model before you use it.
+- Fix a bug at its root. Grep every caller of the function you are about to
+  change before you edit it.
+- Write no comment except a non-obvious WHY. A linter or type-checker
+  pragma such as `# noqa: F401` is a functional directive and stays.
+- Do not add comments to framework-generated, scaffolded, or vendored files.
 
-.claude/agents/ - human invoke explicitly with /agent-name
-never assume which agent applies. if unclear - ask one question.
-parallel agents fine when slices are independent.
+## Skills
 
-complexity demon bad. club it.
+- `pre-plan-rules` before planning a new phase or a non-trivial change, and
+  whenever a plan or decision needs stress-testing.
+- `write-handoff` to checkpoint a session.
+- `commit-plan` before staging or committing.
+- `minimal-ppt-design` for generating simple Microsoft PowerPoint presentations.
 
-## slash command overrides
+## Context
 
-these override the built-in skill/subagent routing. no exceptions.
+Keep context under 40 percent. The StatusLine carries the live token count.
+At 40 percent, run `write-handoff`, then compact.
 
-/prd - do NOT invoke planner skill. follow the PRD rule inline above.
-/grill-me - do NOT invoke skills or subagents. spawn Agent with subagent_type="grill-me" from .claude/agents/grill-me.md.
+Auto-compact triggers at about 83 percent by default.
+`CLAUDE_AUTOCOMPACT_PCT_OVERRIDE` lowers that threshold. It cannot raise it,
+and it applies to subagents too.

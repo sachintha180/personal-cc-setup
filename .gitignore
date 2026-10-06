@@ -6,6 +6,7 @@
 !CLAUDE.md
 !settings.json
 !statusline.sh
+!statusline.ps1
 !agents/
 !agents/**
 !hooks/
@@ -14,3 +15,4 @@
 !specs/**
 !skills/
 !skills/**
+skills/synced/
