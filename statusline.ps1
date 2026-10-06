@@ -36,8 +36,7 @@ if (-not $cwd) { $cwd = "" }
 $branch = $null
 $gitAvailable = [bool](Get-Command git -ErrorAction SilentlyContinue)
 if ($gitAvailable -and $cwd) {
-    # Candidate subdirs are a literal port of the source script's own repo layout.
-    $candidates = @($cwd, (Join-Path $cwd "sim"), (Join-Path $cwd "tracker"), (Join-Path $cwd "socket-sniffer"))
+    $candidates = @($cwd)
     foreach ($candidate in $candidates) {
         if (Test-Path -LiteralPath $candidate -PathType Container) {
             try {

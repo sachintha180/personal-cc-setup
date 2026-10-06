@@ -1,8 +1,8 @@
 {
-  "model": "sonnet",
+  "model": "opus",
   "statusLine": {
     "type": "command",
-    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File ~/.claude/statusline.ps1"
+    "command": "powershell -NoProfile -ExecutionPolicy Bypass -File \"$USERPROFILE/.claude/statusline.ps1\""
   },
   "enabledPlugins": {
     "gopls-lsp@claude-plugins-official": true,
