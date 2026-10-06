@@ -5,7 +5,6 @@
 !.gitignore
 !CLAUDE.md
 !settings.json
-!statusline.sh
 !statusline.ps1
 !agents/
 !agents/**
