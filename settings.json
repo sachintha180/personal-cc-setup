@@ -1,13 +1,36 @@
 {
+  "model": "sonnet",
   "statusLine": {
     "type": "command",
     "command": "powershell -NoProfile -ExecutionPolicy Bypass -File ~/.claude/statusline.ps1"
   },
   "enabledPlugins": {
     "gopls-lsp@claude-plugins-official": true,
-    "copilot-studio@skills-for-copilot-studio": true
+    "copilot-studio@skills-for-copilot-studio": true,
+    "cloudflare@cloudflare": true,
+    "codex@openai-codex": true,
+    "ponytail@ponytail": true,
+    "skill-creator@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
+    "cloudflare": {
+      "source": {
+        "source": "github",
+        "repo": "cloudflare/skills"
+      }
+    },
+    "openai-codex": {
+      "source": {
+        "source": "github",
+        "repo": "openai/codex-plugin-cc"
+      }
+    },
+    "ponytail": {
+      "source": {
+        "source": "github",
+        "repo": "DietrichGebert/ponytail"
+      }
+    },
     "skills-for-copilot-studio": {
       "source": {
         "source": "github",
@@ -15,14 +38,12 @@
       }
     }
   },
-  "effortLevel": "high",
+  "effortLevel": "medium",
   "autoUpdatesChannel": "latest",
   "tui": "fullscreen",
   "voice": {
     "enabled": true,
     "mode": "hold"
   },
-  "skipWorkflowUsageWarning": true,
-  "voiceEnabled": true,
-  "model": "sonnet"
+  "voiceEnabled": true
 }

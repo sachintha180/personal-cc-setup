@@ -92,6 +92,12 @@ resolve only in a project whose `.claude/settings.local.json` sets
 - Write no comment except a non-obvious WHY. A linter or type-checker
   pragma such as `# noqa: F401` is a functional directive and stays.
 - Do not add comments to framework-generated, scaffolded, or vendored files.
+- Check current documentation before any Terraform, cloud, or DevOps work,
+  on any cloud provider. Read the Terraform Registry page for the provider
+  version in use, and the provider's own guides, before writing or changing
+  a resource. Training knowledge and instinct go stale here. Name the
+  sources in the plan or the report. Say this in every infrastructure
+  dispatch.
 
 ## Skills
 
@@ -100,12 +106,3 @@ resolve only in a project whose `.claude/settings.local.json` sets
 - `write-handoff` to checkpoint a session.
 - `commit-plan` before staging or committing.
 - `minimal-ppt-design` for generating simple Microsoft PowerPoint presentations.
-
-## Context
-
-Keep context under 40 percent. The StatusLine carries the live token count.
-At 40 percent, run `write-handoff`, then compact.
-
-Auto-compact triggers at about 83 percent by default.
-`CLAUDE_AUTOCOMPACT_PCT_OVERRIDE` lowers that threshold. It cannot raise it,
-and it applies to subagents too.
