@@ -1,0 +1,101 @@
+/*
+ * theme.css - Bootstrap v5 design token overrides
+ *
+ * Load after bootstrap.min.css, before base.css.
+ *
+ * Namespace:
+ *   --bs-*  Bootstrap native variables
+ *   --ds-*  Design-system extensions (roles absent from Bootstrap)
+ *
+ * Dark mode: apply data-bs-theme="dark" to <html> or any subtree.
+ */
+
+:root {
+  /* Typography - two font stacks only; never introduce a third */
+  --bs-font-sans-serif: "Manrope", sans-serif;
+  --bs-font-monospace: "Space Mono", monospace;
+  --bs-body-font-family: var(--bs-font-sans-serif);
+  --bs-body-font-size: 1rem;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.6;
+
+  /* Semantic colors - every color carries meaning, never decorative */
+  --bs-primary: #2a2a3c;
+  --bs-primary-rgb: 42, 42, 60;
+
+  --bs-secondary: #646488;
+  --bs-secondary-rgb: 100, 100, 136;
+
+  --bs-success: #4a9e62;
+  --bs-success-rgb: 74, 158, 98;
+
+  --bs-danger: #e35e8f;
+  --bs-danger-rgb: 227, 94, 143;
+
+  --bs-warning: #c47d1a;
+  --bs-warning-rgb: 196, 125, 26;
+
+  --bs-info: #1878cc;
+  --bs-info-rgb: 24, 120, 204;
+
+  --bs-light: #f4f4f4;
+  --bs-light-rgb: 244, 244, 244;
+
+  --bs-dark: #2a2a3c;
+  --bs-dark-rgb: 42, 42, 60;
+
+  /* Body / surface */
+  --bs-body-bg: #f4f4f4;
+  --bs-body-bg-rgb: 244, 244, 244;
+  --bs-body-color: #2a2a3c;
+  --bs-body-color-rgb: 42, 42, 60;
+
+  --bs-secondary-color: #646488;
+  --bs-secondary-color-rgb: 100, 100, 136;
+  --bs-tertiary-color: #666666;
+  --bs-tertiary-color-rgb: 102, 102, 102;
+
+  /* Links */
+  --bs-link-color: #0e7ad0;
+  --bs-link-color-rgb: 14, 122, 208;
+  --bs-link-hover-color: #0a5fa0;
+  --bs-link-hover-color-rgb: 10, 95, 160;
+
+  /* Borders */
+  --bs-border-color: #d1d5db;
+  --bs-border-color-translucent: rgba(42, 42, 60, 0.175);
+
+  /* Border radius - sharp by default; exceptions: rounded-pill (badges), rounded-circle (dots) */
+  --bs-border-radius: 0;
+  --bs-border-radius-sm: 0;
+  --bs-border-radius-lg: 0;
+  --bs-border-radius-xl: 0;
+  --bs-border-radius-xxl: 0;
+  --bs-border-radius-pill: 9999px;
+
+  /* Accent extensions - categorisation cycling; no Bootstrap semantic equivalent */
+  --ds-warm: #e59e55; /* warm orange */
+  --ds-cool: #369def; /* cool cyan/blue */
+}
+
+[data-bs-theme="dark"] {
+  --bs-body-bg: #1a1a26;
+  --bs-body-bg-rgb: 26, 26, 38;
+  --bs-body-color: #e8e8f0;
+  --bs-body-color-rgb: 232, 232, 240;
+
+  --bs-secondary-color: #8888aa;
+  --bs-secondary-color-rgb: 136, 136, 170;
+  --bs-tertiary-color: #999999;
+  --bs-tertiary-color-rgb: 153, 153, 153;
+
+  --bs-border-color: #3a3a50;
+  --bs-border-color-translucent: rgba(232, 232, 240, 0.15);
+
+  --bs-link-color: #4da6e8;
+  --bs-link-color-rgb: 77, 166, 232;
+  --bs-link-hover-color: #6bbcf0;
+  --bs-link-hover-color-rgb: 107, 188, 240;
+
+  /* Semantic accent colors (success, danger, warning, info) retain light-mode values intentionally. */
+}
