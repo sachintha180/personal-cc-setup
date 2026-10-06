@@ -1,6 +1,7 @@
 # PptxGenJS Implementation Reference
 
-For use with the `minimal-ppt-design` skill. Implements the full slide spec as reusable helper functions.
+For use with the `docs-minimal-ppt-design` skill. Implements the full slide
+spec as reusable helper functions.
 
 Tested against **pptxgenjs@3.x**. Install: `npm install pptxgenjs`
 
@@ -117,7 +118,7 @@ function addContentSlide(title, ref, items, diagramNote) {
 function addQASlide(source, question, answerBullets) {
   const slide = pres.addSlide();
   slide.background = { color: WHITE };
-  slide.addText("Past Paper Practice", {
+  slide.addText("Example Use Cases", {
     x: 0.5, y: 0.25, w: 9, h: 0.65,
     fontSize: 28, bold: true, color: BLACK,
     align: "left", fontFace: "Arial", margin: 0,
