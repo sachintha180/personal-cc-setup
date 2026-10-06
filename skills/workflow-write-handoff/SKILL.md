@@ -1,5 +1,5 @@
 ---
-name: write-handoff
+name: workflow-write-handoff
 description: Write a session handoff so a fresh session can resume with full context. Use at a stopping point, before a context limit, or as a checkpoint.
 argument-hint: "[reason - why this handoff is being written]"
 ---
@@ -25,7 +25,7 @@ Do this before writing anything.
 4. Create the directory if it does not exist yet.
 
 Reuse whatever location you land on for the rest of this task. Writing the
-first file there also establishes the convention step 1 will find next
+first file there also establishes the convention that step 1 finds next
 time.
 
 ## Filename
@@ -58,8 +58,7 @@ re-explaining their content.
    to know why, not just what.
 
 5. Files touched: paths only, not diffs. `git status --short` and
-   `git diff --stat` against the session's start point are enough. Do not
-   inline full diffs.
+   `git diff --stat` against the session's start point are enough.
 
 6. Open questions or blockers: anything mid-clarification, or anything
    explicitly deferred (for example, "rate limiting was raised but not

@@ -1,5 +1,5 @@
 ---
-name: commit-plan
+name: workflow-commit-plan
 description: Split the current uncommitted changes into single-concern commits, each with a git add and a Conventional Commits subject. Read-only. Use before staging or committing.
 ---
 

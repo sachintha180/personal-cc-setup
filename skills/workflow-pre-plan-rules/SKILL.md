@@ -1,5 +1,5 @@
 ---
-name: pre-plan-rules
+name: workflow-pre-plan-rules
 description: The planning ritual before any new phase, feature, or non-trivial change. Also use to grill a plan, design, or decision with no implementation planned.
 argument-hint: "[what is being planned or grilled]"
 allowed-tools: Agent(Explore)
@@ -8,10 +8,10 @@ allowed-tools: Agent(Explore)
 Process rules, made procedural. This skill has two entry points. Pick one
 before you start.
 
-| Entry point   | Use when                                          | Do          |
-| ------------- | ------------------------------------------------- | ----------- |
-| Full ritual   | Implementation follows the planning               | Steps 1 - 6 |
-| Grill only    | The user wants thinking tested, with no build     | Step 2 only |
+| Entry point | Use when                                      | Do          |
+| ----------- | --------------------------------------------- | ----------- |
+| Full ritual | Implementation follows the planning           | Steps 1 - 6 |
+| Grill only  | The user wants thinking tested, with no build | Step 2 only |
 
 The question discipline in step 2 is the core of both. Read it either way.
 
@@ -41,9 +41,9 @@ why when you do.
 
 ### How many
 
-| Task                                                            | Minimum |
-| --------------------------------------------------------------- | ------- |
-| An ordinary feature, phase, or refactor                          | 5       |
+| Task                                                              | Minimum |
+| ----------------------------------------------------------------- | ------- |
+| An ordinary feature, phase, or refactor                           | 5       |
 | A new subsystem, an architecture decision, or a stack choice      | 10      |
 | Anything the user calls large, or anything spanning many sessions | 10      |
 
