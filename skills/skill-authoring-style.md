@@ -16,5 +16,14 @@ and any `references/` docs), in any project.
    vocabulary itself. Use "Example:" for an illustrative code location and
    reserve "Source:" for a citation to real external documentation.
 
-If a "generalize this" request is ambiguous about whether to keep the
-existing vocabulary, ask rather than assume invention is wanted.
+3. Hard-wrap prose at 80 columns. Leave tables, code blocks, and the
+   frontmatter `description` line unwrapped.
+
+4. Keep the `description` at 300 characters or fewer. State the scope in
+   one sentence. Add two or three trigger phrases. Put detail in the body,
+   which loads only when the skill triggers.
+
+5. Name a skill in kebab case as `domain-subject-kind`. The domain is the
+   area of work the skill serves. The subject is the technology or task it
+   covers. The kind is the form of guidance it gives. Example:
+   `backend-fastapi-testing`. The folder name equals the `name` field.
