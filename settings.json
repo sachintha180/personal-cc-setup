@@ -10,7 +10,8 @@
     "cloudflare@cloudflare": true,
     "codex@openai-codex": true,
     "ponytail@ponytail": true,
-    "skill-creator@claude-plugins-official": true
+    "skill-creator@claude-plugins-official": true,
+    "paddle@claude-community": true
   },
   "extraKnownMarketplaces": {
     "cloudflare": {
@@ -36,6 +37,12 @@
         "source": "github",
         "repo": "microsoft/skills-for-copilot-studio"
       }
+    },
+    "claude-community": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-plugins-community"
+      }
     }
   },
   "effortLevel": "medium",
@@ -45,6 +52,9 @@
     "enabled": true,
     "mode": "hold"
   },
+  "skipDangerousModePermissionPrompt": true,
+  "idleCompaction": false,
+  "agentPushNotifEnabled": true,
   "voiceEnabled": true,
   "skipWorkflowUsageWarning": true
 }
